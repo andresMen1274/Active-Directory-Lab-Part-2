@@ -15,4 +15,7 @@ Then we want to set a static IP address for the splunk server. To do this we ent
 
 <img width="282" height="207" alt="image" src="https://github.com/user-attachments/assets/e0687e1c-f6e3-4b2f-a9c0-87b54a609ed8" />
 
-Then we save the file and clear the screen. Enter in the command sudo netplan apply and this will apply the new changes. Then we are going to enter the command ip a and confirm that the ip address is 
+Then we save the file and clear the screen. Enter in the command sudo netplan apply and this will apply the new changes. Then we are going to enter the command ip a and confirm that the ip address is 192.169.1.10 as shown below.
+
+
+
