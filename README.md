@@ -19,3 +19,8 @@ Then we save the file and clear the screen. Enter in the command sudo netplan ap
 
 <img width="813" height="101" alt="image" src="https://github.com/user-attachments/assets/a0cac7f9-2a93-49d7-b763-ecda35a9b654" />
 
+Then we will ping google.com to make sure that the file is configured correctly.
+
+<img width="761" height="81" alt="image" src="https://github.com/user-attachments/assets/43dcda54-48dc-4a22-88d1-0a69f1a39f17" />
+
+Next we want to install the splunk server to do this we will go to splunk.com and create an account. 
