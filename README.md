@@ -13,9 +13,9 @@ Then we are going to open the splunk server and use the command ip a. Then we sh
 
 Then we want to set a static IP address for the splunk server. To do this we enter the command sudo nano /etc/netplan/50-cloud-init.yaml and change the file to look like this.
 
-<img width="282" height="207" alt="image" src="https://github.com/user-attachments/assets/e0687e1c-f6e3-4b2f-a9c0-87b54a609ed8" />
+<img width="277" height="197" alt="image" src="https://github.com/user-attachments/assets/44f549d6-c0df-4c62-a468-0e75f8f41708" />
 
 Then we save the file and clear the screen. Enter in the command sudo netplan apply and this will apply the new changes. Then we are going to enter the command ip a and confirm that the ip address is 192.169.1.10 as shown below.
 
-
+<img width="813" height="101" alt="image" src="https://github.com/user-attachments/assets/a0cac7f9-2a93-49d7-b763-ecda35a9b654" />
 
