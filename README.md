@@ -23,4 +23,25 @@ Then we will ping google.com to make sure that the file is configured correctly.
 
 <img width="761" height="81" alt="image" src="https://github.com/user-attachments/assets/43dcda54-48dc-4a22-88d1-0a69f1a39f17" />
 
-Next we want to install the splunk server to do this we will go to splunk.com and create an account. 
+Next we want to install the splunk server to do this we will go to splunk.com and create an account. After that has been done naviagte to splunk.com and select splunk enterprise then download. When the download has been completed we open the ubuntu server and enter the command sudo apt-get install virtualbox then tab to view the options. We want the guest additions iso therefore, we will enter that in. 
+
+<img width="912" height="83" alt="image" src="https://github.com/user-attachments/assets/ac7a5a8a-ee80-4446-9fd6-4daf458b5a88" />
+
+When the download has been completed we are going to create a folder named shared folder and put in the downloaded splunk server DEB file. Then in virtualbox we will go to settings then shared folder and select add. Then select all of the boxes below and select ok. 
+
+<img width="372" height="311" alt="image" src="https://github.com/user-attachments/assets/f9348fbb-e32c-43fc-9d63-706a32534024" />
+
+Reboot the server with the command sudo reboot and login. We are going to add a new user to the vboxsf and we get the prompt vboxsf doesn't exist. we are going to again enter the command sudo apt=get install virtualbox with a tab to view the installations. We will select the -guest-utils.
+
+<img width="920" height="192" alt="image" src="https://github.com/user-attachments/assets/73645394-96d4-4cf5-bded-bac7df80b1db" />
+
+Then run the command sudo adduser andres vboxsf and then make a shared directory with the command mkdir share. Now we want to mount the shared folder to the share directory and to do this run the command sudo mount -t vboxsf -o uid=1000,gid=1000 <shared folder name> share/. Then cd into the share directory and la -la and we should be able to see the splunk download file. Run the command sudo dpkg -i <splunk server name>. 
+
+<img width="1050" height="357" alt="image" src="https://github.com/user-attachments/assets/aeab454f-01f8-46ab-a388-d9e73a0a65b7" />
+
+Now we want to check that splunk has been configured correctly. To do this we will cd into the /opt/splunk directory and the use ls -la to check the contents. 
+
+<img width="798" height="372" alt="image" src="https://github.com/user-attachments/assets/d4ee2e87-5087-4c8b-8a34-d7450f739e5e" />
+
+We can see that all of the files are owned by the splunk user, so we will switch to that user by using the command sudo -u splunk bash. To run the installer we will cd into the bin directory then run the command ./splunk start to start the installer. Now we want splunk to run everytime the virtual machine so we will exit. Cd into the bin directory and then run the command sudo ./splunk enable boot-start -user splunk. Now the splunk server will start.
+
