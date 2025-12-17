@@ -61,4 +61,16 @@ After selecting the file we select raw and save it as an xml file. Next we navig
 
 <img width="507" height="98" alt="image" src="https://github.com/user-attachments/assets/a8f195ac-17e4-433c-b85a-3de3bd3ea374" />
 
-Now we are going to tell our splunk forwarder what to forward to the splunk server. To do this we go to the program files that are used for the splunk universal forwarder and create a input.conf file that is in the local directory. 
+Now we are going to tell our splunk forwarder what to forward to the splunk server. To do this we go to the program files that are used for the splunk universal forwarder and create a input.conf file that is in the local directory. We open notepad in administrative mode and then enter whats shown below into the file. 
+
+<img width="751" height="517" alt="image" src="https://github.com/user-attachments/assets/1dec5edc-640a-4fa2-a7ec-366ac74e1111" />
+
+Then save it in the local directory as input.conf 
+
+<img width="608" height="472" alt="image" src="https://github.com/user-attachments/assets/203f5e04-d8c0-45fd-9636-f35881198e11" />
+
+Since we modified the inputs now we have to reset the universal forwarder and we do this by going to services and run as administrator. Then we find splunk forwarder and navigate to log on and change it to local system account. Right click the splunk forwarder and then select restart.  
+
+<img width="801" height="586" alt="image" src="https://github.com/user-attachments/assets/59bda40a-fe6a-40d5-a9b4-46f3c403d6a8" />
+
+This error screen appeared we will just select start service. 
