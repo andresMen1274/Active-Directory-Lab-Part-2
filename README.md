@@ -45,3 +45,20 @@ Now we want to check that splunk has been configured correctly. To do this we wi
 
 We can see that all of the files are owned by the splunk user, so we will switch to that user by using the command sudo -u splunk bash. To run the installer we will cd into the bin directory then run the command ./splunk start to start the installer. Now we want splunk to run everytime the virtual machine so we will exit. Cd into the bin directory and then run the command sudo ./splunk enable boot-start -user splunk. Now the splunk server will start.
 
+Now we want to install the universal forwarder on the Windows target machine we will start the virtual machine. Then we will search splunk.com and navigate to the splunk universal forwarder then download the Windows 64-bit version. 
+
+<img width="1022" height="765" alt="image" src="https://github.com/user-attachments/assets/1a676eb4-8323-4bd0-a09f-27d700bd13ce" />
+
+Open the file when it has finished downloading and select next until you reach recieveing indexer. Then enter in the IP address of the splunk server that we previously configured and enter in 9997 for the other field. Now we will download Sysmon search sysmon and then download it from the Microsoft website. 
+
+<img width="1022" height="765" alt="image" src="https://github.com/user-attachments/assets/7ba87eb7-8928-4e51-aada-93fdd69d29ef" />
+
+Then we want to use the olaf configuration of sysmon, so we are going to find this github repository and select sysmonconfig.xml.
+
+<img width="1018" height="767" alt="image" src="https://github.com/user-attachments/assets/aabbb09e-fdef-4ece-b234-5020ad775811" />
+
+After selecting the file we select raw and save it as an xml file. Next we navigate to fiel explorer and then select the sysmon zip file and click extract all. When it has finished extracting the contents then copy the file path and open powershell with administrative privlages. Now we are going to cd into the directory where sysmon was configured in and then enter the command shown below.
+
+<img width="507" height="98" alt="image" src="https://github.com/user-attachments/assets/a8f195ac-17e4-433c-b85a-3de3bd3ea374" />
+
+Now we are going to tell our splunk forwarder what to forward to the splunk server. To do this we go to the program files that are used for the splunk universal forwarder and create a input.conf file that is in the local directory. 
