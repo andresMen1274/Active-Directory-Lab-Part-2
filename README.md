@@ -73,4 +73,8 @@ Since we modified the inputs now we have to reset the universal forwarder and we
 
 <img width="801" height="586" alt="image" src="https://github.com/user-attachments/assets/59bda40a-fe6a-40d5-a9b4-46f3c403d6a8" />
 
-This error screen appeared we will just select start service. 
+This error screen appeared we will just select start service. Now we will look up the IP address of the splunk server and will login with out splunk server credentials. Then go to settings and indexes. We need to create a new index, so out input.conf file will start sending logs to the Splunk server. 
+
+<img width="1018" height="850" alt="image" src="https://github.com/user-attachments/assets/c985bfdd-586a-46be-9fe9-4cc5bac7809e" />
+
+Select new Index and name it endpoint and save. Then we navigate to settings again and then select forwarding and recieving. Then select configure recieving and new recieving port. Enter the 9997 default port. 
