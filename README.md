@@ -78,3 +78,4 @@ This error screen appeared we will just select start service. Now we will look u
 <img width="1018" height="850" alt="image" src="https://github.com/user-attachments/assets/c985bfdd-586a-46be-9fe9-4cc5bac7809e" />
 
 Select new Index and name it endpoint and save. Then we navigate to settings again and then select forwarding and recieving. Then select configure recieving and new recieving port. Enter the 9997 default port. 
+The configureation for the server is the same as the configuration of the target machine. Therefore, it will not be repeated or this will seem very redundant.
