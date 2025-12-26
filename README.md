@@ -79,3 +79,35 @@ This error screen appeared we will just select start service. Now we will look u
 
 Select new Index and name it endpoint and save. Then we navigate to settings again and then select forwarding and recieving. Then select configure recieving and new recieving port. Enter the 9997 default port. 
 The configureation for the server is the same as the configuration of the target machine. Therefore, it will not be repeated or this will seem very redundant.
+
+Now I will configure the active directory and promote domain controller on the Windows server. Which will allow the Windows PC to join the domain.
+
+First we want to add role based features for our Windows server. To do this we naviagte to server manager and select manage, role based features, next, and select role-based or feature-based installation. Chose the Winodws server that we have configured and select Active Directory Domain Services as well as add features. 
+
+<img width="1022" height="768" alt="image" src="https://github.com/user-attachments/assets/b4bdc922-b277-4abf-9e54-05eab64b8809" />
+
+Keep selecting next until the installation button apears and select install. When finished you will recieve this prompt. 
+
+<img width="787" height="561" alt="image" src="https://github.com/user-attachments/assets/66170b41-0709-48e7-8d18-46829959cfe2" />
+
+close out the pop up screen and select the flag that has a yellow icon next to it. Then select promote this server to a domain controller.
+
+<img width="1021" height="767" alt="image" src="https://github.com/user-attachments/assets/5d7729c1-572f-4ebc-a78a-c3c4d9a35fa1" />
+
+Then select new forrest and enter a name of your choice followed by a . and a another name. Then select next until the installation button appears. When the installation has been completed it will tell the user that the computer will restart.
+
+<img width="1023" height="767" alt="image" src="https://github.com/user-attachments/assets/1beb5965-789b-4ad9-96e3-e63474355575" />
+
+Then login to the Windows server again. Go to the server manager and select Active Directory Users and Computrers. Now I want to create a new organizational unit and to do this I right click the name of the server and select new organizational unit. Then I will name it IT and select ok. 
+
+<img width="750" height="527" alt="image" src="https://github.com/user-attachments/assets/cbd07f53-6440-4fe8-a810-f7d3bf7607da" />
+
+Then we can add a user to the newly created organization by selecting new and user. give them a name and password and add them to the system.
+
+<img width="431" height="377" alt="image" src="https://github.com/user-attachments/assets/ca2d4092-9276-4e34-82b0-343824b72ff2" />
+
+Now we want to add the Windows machine to the domain, so login to the Windows 10 machine. Then search this PC and properties. Select advanced system settings and the computer name tab. Then select domain and eneter in the domain name of the server. 
+
+<img width="797" height="632" alt="image" src="https://github.com/user-attachments/assets/850e66e8-9321-48c3-a164-17dda37fb911" />
+
+We get this error because our target machine does not know how to resolve ACTIVEDIRECTORY.LOCAL. We are going to fix this be heading to the network adapter and change adapter options. 
