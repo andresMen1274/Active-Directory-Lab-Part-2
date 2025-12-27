@@ -110,4 +110,15 @@ Now we want to add the Windows machine to the domain, so login to the Windows 10
 
 <img width="797" height="632" alt="image" src="https://github.com/user-attachments/assets/850e66e8-9321-48c3-a164-17dda37fb911" />
 
-We get this error because our target machine does not know how to resolve ACTIVEDIRECTORY.LOCAL. We are going to fix this be heading to the network adapter and change adapter options. 
+We get this error because our target machine does not know how to resolve ACTIVEDIRECTORY.LOCAL. We are going to fix this be heading to the network adapter and change adapter options. Select properties and choose ip v4 properties and change the DNS to the IP address of the domain controller which is 192.168.1.7. Then exit and check that it has been correctly configured by using the command ipconfig /all in command prompt. 
+
+<img width="660" height="512" alt="image" src="https://github.com/user-attachments/assets/9dd26611-3449-42bd-be6b-f9087cd8179e" />
+
+You should see that the DNS server is set to the IP address of the domain controller and we will ping google.com to check if there is still internet connection. Now we will attempt to join the domain another time
+and we will recieve this prompt.
+
+<img width="1022" height="856" alt="image" src="https://github.com/user-attachments/assets/1b7ff40a-c76d-4732-b934-235dd2e9a045" />
+
+Use the login for the Windows server and the computer will be restarted. Now we want to login as the other user that we created which was john smith. To do this we select other user and enter in the credentials that we created. Now it has been finished the Active Directory server has been configured and deployed. 
+
+<img width="1016" height="855" alt="image" src="https://github.com/user-attachments/assets/bf2a1049-1976-4071-bc05-1d6f6a34d60d" />
